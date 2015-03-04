@@ -209,7 +209,7 @@ public class CharacterControllerLogic : MonoBehaviour
 			capCollider.height = capsuleHeight + (animator.GetFloat("CapsuleCurve") * 0.5f);
 			if (gamecam.CamState != ThirdPersonCamera.CamStates.Free)
 			{
-				gamecam.ParentRig.Translate(Vector3.up * (transform.position.y - oldY));
+				gamecam.transform.Translate(Vector3.up * (transform.position.y - oldY));
 			}
 		}
 	}
@@ -244,15 +244,15 @@ public class CharacterControllerLogic : MonoBehaviour
 	
 	public bool IsInPivot()
 	{
-		return stateInfo.nameHash == m_LocomotionPivotLId || 
-			stateInfo.nameHash == m_LocomotionPivotRId || 
-			transInfo.nameHash == m_LocomotionPivotLTransId || 
-			transInfo.nameHash == m_LocomotionPivotRTransId;
+		return stateInfo.fullPathHash == m_LocomotionPivotLId || 
+			stateInfo.fullPathHash == m_LocomotionPivotRId || 
+			transInfo.fullPathHash == m_LocomotionPivotLTransId || 
+			transInfo.fullPathHash == m_LocomotionPivotRTransId;
 	}
 
     public bool IsInLocomotion()
     {
-        return stateInfo.nameHash == m_LocomotionId;
+        return stateInfo.fullPathHash == m_LocomotionId;
     }
 	
 	public void StickToWorldspace(Transform root, Transform camera, ref float directionOut, ref float speedOut, ref float angleOut, bool isPivoting)
