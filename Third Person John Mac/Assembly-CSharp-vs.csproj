@@ -50,11 +50,8 @@
      <Compile Include="Assets\Effects\ImageEffectBase.cs" />
      <Compile Include="Assets\Effects\ImageEffects.cs" />
      <Compile Include="Assets\Effects\SSAOEffect.cs" />
-     <Compile Include="Assets\Scripts\CharacterControllerLogic.cs" />
-     <Compile Include="Assets\Scripts\DebugDraw.cs" />
-     <Compile Include="Assets\Scripts\SceneViewCameraFollower.cs" />
-     <Compile Include="Assets\Scripts\ThirdPersonCamera.cs" />
-     <Compile Include="Assets\Scripts\ThirdPersonCameraEditor.cs" />
+     <Compile Include="Assets\Scripts\PlayerControllerLogic.cs" />
+     <Compile Include="Assets\Scripts\ThirdPersonCameraController.cs" />
      <None Include="Assets\Effects\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Effects\_Sources\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\Effects\_Sources\Shaders\ShowAlphaChannel.shader" />
